@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			p .nav{
+				color:green;
+				position: relative;/* 相对定位 */
+			}
+			p .nav::after{
+				content: attr(title);
+				word-break: keep-all;
+				padding: 2px 16px;
+				background-color: #000000;				
+		        color: aliceblue;
+				position: absolute;
+				left: calc(100% + 20px);
+				border-radius: 8px;
+				opacity: 0;/* 透明度 */
+				transition: all 1s;
+				
+				/* width: 40px; */
+			}
+			p .nav:hover::after{
+				opacity: 1;
+				
+				left: calc(100% + 10px);
+			}
+		</style>
+	</head>
+	<body>
+		<p>云裳衣裳花想容<span title="你好!" class="nav">春风拂槛露华浓</span>
+		若非群玉山头见，会向瑶台月下逢</p>
+	</body>
+<ml>
